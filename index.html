@@ -72,7 +72,8 @@
   .lang { border: 1px solid var(--line); background: transparent; color: var(--forest); border-radius: 999px; min-width: 44px; min-height: 44px; padding: 0 14px; font: 600 12px "Jost", sans-serif; letter-spacing: .08em; cursor: pointer; }
   .lang:hover { border-color: var(--forest); }
   .lang-long { display: none; }
-  .btn.ig { gap: 10px; }
+  .btn.nav-cta { gap: 10px; }
+  .btn.ig { display: none; }
   .burger { display: none; }
   .nav-info { display: none; }
 
@@ -105,9 +106,9 @@
     .lang { min-height: 48px; padding: 0 22px; font-size: 14px; }
     .lang-short { display: none; }
     .lang-long { display: inline; }
-    .btn.ig { width: 48px; height: 48px; padding: 0; justify-content: center; border-radius: 50%; }
+    .btn.nav-cta { display: none; }
+    .btn.ig { display: inline-flex; width: 48px; height: 48px; padding: 0; justify-content: center; border-radius: 50%; }
     .btn.ig svg { width: 24px; height: 24px; }
-    .ig-label { display: none; }
     .nav-info { display: grid; gap: 14px; margin-top: 18px; padding: 16px 18px; background: var(--mint-2); border: 1px solid var(--line); border-radius: 16px; }
     .nav-info-label { display: block; font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-ink); margin-bottom: 4px; }
     .nav-hours { display: grid; grid-template-columns: auto 1fr; gap: 2px 18px; font-size: 15px; color: var(--ink); }
@@ -330,9 +331,12 @@
       <a class="navlink" href="#visitanos"><span class="es">Visítanos</span><span class="en">Visit</span></a>
       <div class="nav-extra">
         <button class="lang" id="langBtn" aria-label="Cambiar idioma / Switch language"><span class="lang-short">EN</span><span class="lang-long">English</span></button>
-        <a class="btn ig" href="https://www.instagram.com/rozetta_brunch_mayaguez/" target="_blank" rel="noopener" aria-label="Síguenos en Instagram / Follow us on Instagram">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
-          <span class="ig-label"><span class="es">Síguenos</span><span class="en">Follow us</span></span>
+        <a class="btn nav-cta" href="https://www.google.com/maps/dir/?api=1&destination=Rozetta+Brunch+Calle+de+la+Candelaria+Mayag%C3%BCez+PR+00680" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          <span class="es">Cómo llegar</span><span class="en">Get directions</span>
+        </a>
+        <a class="btn ig" href="https://www.instagram.com/rozetta_brunch_mayaguez/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
         </a>
       </div>
       <div class="nav-info">
