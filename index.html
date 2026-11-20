@@ -215,7 +215,12 @@
     border: 1px solid var(--gold); outline: 1px solid var(--gold); outline-offset: -10px; border-radius: 6px;
     display: grid; grid-template-columns: 1fr 1fr; gap: 48px 64px;
   }
-  .menu-col h3 { font-family: "Pinyon Script", cursive; font-weight: 400; font-size: 48px; color: var(--rose-ink); text-align: center; margin-bottom: 18px; }
+  .menu-col h3 { font-family: "Pinyon Script", cursive; font-weight: 400; font-size: 44px; line-height: 1.1; color: var(--rose-ink); text-align: center; margin: 44px 0 10px; }
+  .menu-col h3:first-child { margin-top: 0; }
+  .menu-note { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 16px; line-height: 1.4; color: var(--ink-soft); text-align: center; margin: 0 auto 8px; max-width: 34em; }
+  .item p.addon { font-family: "Jost", sans-serif; font-size: 13px; color: var(--gold-ink); margin-top: 6px; line-height: 1.5; }
+  .menu-tagline { grid-column: 1 / -1; text-align: center; font-family: "Great Vibes", cursive; font-size: 34px; color: var(--gold-ink); border-top: 1px dotted var(--gold); padding-top: 26px; margin-top: 8px; }
+  .menu-foot p.menu-warning { max-width: 46em; margin: 0 auto 18px; font-size: 13px; line-height: 1.6; }
   .item { padding: 14px 0; border-bottom: 1px dotted rgba(184,145,63,.5); }
   .item:last-child { border-bottom: 0; }
   .item-top { display: flex; align-items: baseline; gap: 12px; }
@@ -448,48 +453,107 @@
       <div class="section-head">
         <span class="eyebrow"><span class="es">Nuestro menú</span><span class="en">Our menu</span></span>
         <h2><span class="es">Para <span class="script">consentirte</span></span><span class="en">Made to <span class="script">indulge</span></span></h2>
-        <p><span class="es">Algunos de los platos que hemos compartido en Instagram.</span><span class="en">A few of the dishes we’ve shared on Instagram.</span></p>
+        <p><span class="es">Clásicos, especialidades, pancakes de la casa y lunch.</span><span class="en">Classics, specialties, house pancakes and lunch.</span></p>
       </div>
 
       <div class="menu-card">
         <div class="menu-col">
-          <h3>Brunch</h3>
+          <h3><span class="es">Clásicos</span><span class="en">Classics</span></h3>
+          <p class="menu-note"><span class="es">Waffles, pancakes y French toast incluyen azúcar y whipped cream. Añade Nutella, fresa, guineo o blueberry: $1.50 c/u.</span><span class="en">Waffles, pancakes and French toast come with sugar and whipped cream. Add Nutella, strawberry, banana or blueberry: $1.50 each.</span></p>
           <div class="item">
-            <div class="item-top"><h4><span class="es">Plato de brunch</span><span class="en">Brunch platter</span></h4></div>
-            <p><span class="es">Waffles, pancake y tostadas francesas, con huevos revueltos, jamón, papas, pan tostado y mermelada.</span><span class="en">Waffles, pancake and French toast, with scrambled eggs, ham, potatoes, toast and jam.</span></p>
+            <div class="item-top"><h4>Bagel / Croissant</h4><span class="dots"></span><span class="price">$9</span></div>
+            <p><span class="es">Incluye jamón, queso, huevo y ensalada.</span><span class="en">Comes with ham, cheese, egg and salad.</span></p>
           </div>
           <div class="item">
-            <div class="item-top"><h4>Pancakes</h4></div>
-            <p><span class="es">Con frutos rojos y crema, o con fruta y nueces.</span><span class="en">With berries and cream, or with fruit and walnuts.</span></p>
+            <div class="item-top"><h4>Waffles</h4><span class="dots"></span><span class="price">$10</span></div>
           </div>
           <div class="item">
-            <div class="item-top"><h4><span class="es">Churrasco con huevos</span><span class="en">Steak &amp; eggs</span></h4></div>
-            <p><span class="es">Con huevos fritos, papas y ensalada.</span><span class="en">With fried eggs, potatoes and salad.</span></p>
+            <div class="item-top"><h4>Pancakes</h4><span class="dots"></span><span class="price">$12</span></div>
           </div>
           <div class="item">
-            <div class="item-top"><h4><span class="es">Pan con salsa de queso</span><span class="en">Bread bowl with cheese sauce</span></h4></div>
-            <p><span class="es">Pan redondo bañado en salsa de queso.</span><span class="en">A round loaf topped with cheese sauce.</span></p>
+            <div class="item-top"><h4>French toast</h4><span class="dots"></span><span class="price">$15</span></div>
+          </div>
+          <h3><span class="es">Especialidades</span><span class="en">Specialties</span></h3>
+          <p class="menu-note"><span class="es">Añade queso $1 · cebolla y pimientos $1 · cambia a pavo $1 · cambia a bacon $2.</span><span class="en">Add cheese $1 · onions &amp; peppers $1 · swap to turkey $1 · swap to bacon $2.</span></p>
+          <div class="item">
+            <div class="item-top"><h4>Le Petite Rosé</h4><span class="dots"></span><span class="price">$9</span></div>
+            <p><span class="es">2 huevos fritos o revueltos, jamón y tostadas.</span><span class="en">2 eggs fried or scrambled, ham and toast.</span></p>
           </div>
           <div class="item">
-            <div class="item-top"><h4><span class="es">Mac &amp; cheese en pan</span><span class="en">Mac &amp; cheese bread bowl</span></h4></div>
-            <p><span class="es">Servido en pan redondo.</span><span class="en">Served in a round loaf.</span></p>
+            <div class="item-top"><h4>Rozetta Morning</h4><span class="dots"></span><span class="price">$15</span></div>
+            <p><span class="es">3 huevos fritos o revueltos, jamón, tostadas y papas salteadas.</span><span class="en">3 eggs fried or scrambled, ham, toast and sautéed potatoes.</span></p>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Sweet Morning Rosé</h4><span class="dots"></span><span class="price">$18</span></div>
+            <p><span class="es">2 huevos fritos o revueltos, jamón, tostadas y papas salteadas. Escoge pancake, waffle o French toast; incluye azúcar, whipped cream y jalea artesanal de la casa (berries).</span><span class="en">2 eggs fried or scrambled, ham, toast and sautéed potatoes. Choose a pancake, waffle or French toast; comes with sugar, whipped cream and our house-made berry jam.</span></p>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>La Duquesa Española</h4><span class="dots"></span><span class="price">$12</span></div>
+            <p><span class="es">Tortilla de huevos, papa, vegetales y queso. Incluye tostadas de pan ciabatta.</span><span class="en">Egg tortilla with potato, vegetables and cheese. Comes with ciabatta toast.</span></p>
+            <p class="addon"><span class="es">Añade jamón $2 · pavo $3 · bacon $4 · pollo $5 · churrasco $10 · salmón $12 · salsa cremosa $2.50</span><span class="en">Add ham $2 · turkey $3 · bacon $4 · chicken $5 · skirt steak $10 · salmon $12 · creamy sauce $2.50</span></p>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Open toast avocado</h4><span class="dots"></span><span class="price">$14</span></div>
+            <p><span class="es">Tostada de aguacate en pan de romero, espinacas, cherry tomatoes, queso feta y balsámico.</span><span class="en">Avocado toast on rosemary bread with spinach, cherry tomatoes, feta and balsamic.</span></p>
+            <p class="addon"><span class="es">Cambia a sourdough $2 · añade huevos $2</span><span class="en">Swap to sourdough $2 · add eggs $2</span></p>
           </div>
         </div>
         <div class="menu-col">
-          <h3><span class="es">Bebidas</span><span class="en">Drinks</span></h3>
+          <h3>Sandwich / Wrap</h3>
           <div class="item">
-            <div class="item-top"><h4><span class="es">Café y lattes</span><span class="en">Coffee &amp; lattes</span></h4></div>
-            <p><span class="es">Servidos en porcelana.</span><span class="en">Served in porcelain.</span></p>
+            <div class="item-top"><h4><span class="es">Jamón, queso y huevo</span><span class="en">Ham, cheese &amp; egg</span></h4><span class="dots"></span><span class="price">$9</span></div>
           </div>
           <div class="item">
-            <div class="item-top"><h4><span class="es">Bebidas navideñas</span><span class="en">Holiday drinks</span></h4></div>
-            <p><span class="es">De temporada, con crema batida.</span><span class="en">Seasonal, topped with whipped cream.</span></p>
+            <div class="item-top"><h4>Grilled cheese</h4><span class="dots"></span><span class="price">$7</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Monte Cristo</h4><span class="dots"></span><span class="price">$12</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Pollo</span><span class="en">Chicken</span></h4><span class="dots"></span><span class="price">$12</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Pastrami</h4><span class="dots"></span><span class="price">$13</span></div>
+          </div>
+          <h3><span class="es">Pancakes de la casa</span><span class="en">House pancakes</span></h3>
+          <div class="item">
+            <div class="item-top"><h4>La Vie en Mango</h4><span class="dots"></span><span class="price">$15</span></div>
+            <p><span class="es">Suaves y esponjosos pancakes abrazados por nuestra jalea artesanal de mangó, whipped cream y nueces.</span><span class="en">Soft, fluffy pancakes wrapped in our house-made mango jam, whipped cream and walnuts.</span></p>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>La tentación de Rozetta</h4><span class="dots"></span><span class="price">$15</span></div>
+            <p><span class="es">Suaves y esponjosos pancakes de brazo gitano de queso con guayaba, polvoreados de azúcar y whipped cream.</span><span class="en">Soft, fluffy cheese-and-guava brazo gitano pancakes, dusted with sugar and whipped cream.</span></p>
+          </div>
+          <h3><span class="es">Yogurt y avena</span><span class="en">Yogurt &amp; oatmeal</span></h3>
+          <div class="item">
+            <div class="item-top"><h4>Yogurt Bowl</h4><span class="dots"></span><span class="price">$8</span></div>
+            <p><span class="es">Incluye 3 frutas, granola y miel.</span><span class="en">With 3 fruits, granola and honey.</span></p>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Avena</span><span class="en">Oatmeal</span></h4><span class="dots"></span><span class="price">$4</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Avena Deluxe</span><span class="en">Oatmeal Deluxe</span></h4><span class="dots"></span><span class="price">$6.50</span></div>
+            <p><span class="es">Frutas y granola.</span><span class="en">Fruit and granola.</span></p>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Avena de coco, jengibre y cúrcuma</span><span class="en">Coconut, ginger &amp; turmeric oatmeal</span></h4><span class="dots"></span><span class="price">$8</span></div>
+          </div>
+          <h3>Lunch</h3>
+          <p class="menu-note"><span class="es">Añade proteína: bacon $2 · pollo $3 · churrasco $8 · salmón $12. Añade bowl de pan recién horneado $5.</span><span class="en">Add protein: bacon $2 · chicken $3 · skirt steak $8 · salmon $12. Add a fresh-baked bread bowl $5.</span></p>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Sopas</span><span class="en">Soups</span></h4><span class="dots"></span><span class="price">$8</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Pasta penne en salsa blanca cremosa</span><span class="en">Penne in creamy white sauce</span></h4><span class="dots"></span><span class="price">$10</span></div>
+            <p><span class="es">Incluye vegetales.</span><span class="en">With vegetables.</span></p>
           </div>
         </div>
+        <p class="menu-tagline">Donde cada taza cuenta una historia</p>
       </div>
 
       <div class="menu-foot">
-        <p><span class="es">Consulta el menú completo y los precios en Rozetta.</span><span class="en">Ask for the full menu and prices at Rozetta.</span></p>
+        <p class="menu-warning"><span class="es">Advertencia: consumir carnes, aves, mariscos o huevos crudos o poco cocidos puede aumentar el riesgo de enfermedades transmitidas por alimentos.</span><span class="en">Warning: consuming raw or undercooked meats, poultry, seafood or eggs may increase your risk of foodborne illness.</span></p>
         <a class="btn ghost" href="https://www.instagram.com/rozetta_brunch_mayaguez/" target="_blank" rel="noopener"><span class="es">Más en Instagram</span><span class="en">More on Instagram</span></a>
       </div>
     </div>
