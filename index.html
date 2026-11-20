@@ -219,6 +219,11 @@
   .menu-col h3:first-child { margin-top: 0; }
   .menu-note { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 16px; line-height: 1.4; color: var(--ink-soft); text-align: center; margin: 0 auto 8px; max-width: 34em; }
   .item p.addon { font-family: "Jost", sans-serif; font-size: 13px; color: var(--gold-ink); margin-top: 6px; line-height: 1.5; }
+  .menu-tabs { display: flex; justify-content: center; gap: 6px; width: max-content; max-width: 100%; margin: 0 auto 28px; padding: 6px; background: var(--ivory); border: 1px solid var(--gold); border-radius: 999px; }
+  .menu-tab { min-height: 46px; padding: 0 22px; border: 0; border-radius: 999px; background: transparent; color: var(--forest); font: 600 13px "Jost", sans-serif; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+  .menu-tab:hover { background: var(--mint-2); }
+  .menu-tab[aria-selected="true"] { background: var(--forest); color: var(--ivory); }
+  .menu-card[hidden] { display: none; }
   .menu-tagline { grid-column: 1 / -1; text-align: center; font-family: "Great Vibes", cursive; font-size: 34px; color: var(--gold-ink); border-top: 1px dotted var(--gold); padding-top: 26px; margin-top: 8px; }
   .menu-foot p.menu-warning { max-width: 46em; margin: 0 auto 18px; font-size: 13px; line-height: 1.6; }
   .item { padding: 14px 0; border-bottom: 1px dotted rgba(184,145,63,.5); }
@@ -315,6 +320,7 @@
     .info-row { grid-template-columns: 1fr; gap: 2px; }
     .taller::after { inset: 8px; }
     .menu-col h3 { font-size: 38px; }
+    .menu-tab { padding: 0 14px; font-size: 12px; letter-spacing: .06em; }
   }
 </style>
 </head>
@@ -453,10 +459,15 @@
       <div class="section-head">
         <span class="eyebrow"><span class="es">Nuestro menú</span><span class="en">Our menu</span></span>
         <h2><span class="es">Para <span class="script">consentirte</span></span><span class="en">Made to <span class="script">indulge</span></span></h2>
-        <p><span class="es">Clásicos, especialidades, pancakes de la casa y lunch.</span><span class="en">Classics, specialties, house pancakes and lunch.</span></p>
+        <p><span class="es">Brunch, lunch, café, bebidas y postres.</span><span class="en">Brunch, lunch, coffee, drinks and desserts.</span></p>
       </div>
 
-      <div class="menu-card">
+      <div class="menu-tabs" role="tablist" aria-label="Menú">
+        <button class="menu-tab" role="tab" id="tab-food" aria-controls="menu-food" aria-selected="true"><span class="es">Comida</span><span class="en">Food</span></button>
+        <button class="menu-tab" role="tab" id="tab-drinks" aria-controls="menu-drinks" aria-selected="false" tabindex="-1"><span class="es">Bebidas y postres</span><span class="en">Drinks &amp; desserts</span></button>
+      </div>
+
+      <div class="menu-card" id="menu-food" role="tabpanel" aria-labelledby="tab-food">
         <div class="menu-col">
           <h3><span class="es">Clásicos</span><span class="en">Classics</span></h3>
           <p class="menu-note"><span class="es">Waffles, pancakes y French toast incluyen azúcar y whipped cream. Añade Nutella, fresa, guineo o blueberry: $1.50 c/u.</span><span class="en">Waffles, pancakes and French toast come with sugar and whipped cream. Add Nutella, strawberry, banana or blueberry: $1.50 each.</span></p>
@@ -547,6 +558,89 @@
           <div class="item">
             <div class="item-top"><h4><span class="es">Pasta penne en salsa blanca cremosa</span><span class="en">Penne in creamy white sauce</span></h4><span class="dots"></span><span class="price">$10</span></div>
             <p><span class="es">Incluye vegetales.</span><span class="en">With vegetables.</span></p>
+          </div>
+        </div>
+        <p class="menu-tagline">Donde cada taza cuenta una historia</p>
+      </div>
+
+      <div class="menu-card" id="menu-drinks" role="tabpanel" aria-labelledby="tab-drinks" hidden>
+        <div class="menu-col">
+          <h3><span class="es">Bebidas</span><span class="en">Drinks</span></h3>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Agua</span><span class="en">Water</span></h4><span class="dots"></span><span class="price">$1</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Jugos</span><span class="en">Juices</span></h4><span class="dots"></span><span class="price">$5</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Sodas</h4><span class="dots"></span><span class="price">$2</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Perrier</h4><span class="dots"></span><span class="price">$3</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Mimosas</h4><span class="dots"></span><span class="price">$8</span></div>
+          </div>
+          <h3><span class="es">Café</span><span class="en">Coffee</span></h3>
+          <div class="item">
+            <div class="item-top"><h4>Espresso</h4><span class="dots"></span><span class="price">$2</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Latte</h4><span class="dots"></span><span class="price">$4</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Americano</h4><span class="dots"></span><span class="price">$3</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Cappuccino</h4><span class="dots"></span><span class="price">$5</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Cortadito</h4><span class="dots"></span><span class="price">$3</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Espresso Martini</h4><span class="dots"></span><span class="price">$10</span></div>
+          </div>
+        </div>
+        <div class="menu-col">
+          <h3><span class="es">Bebidas iced</span><span class="en">Iced drinks</span></h3>
+          <p class="menu-note"><span class="es">Cambio de leche $1 · sabor $1 · extra shot $1</span><span class="en">Milk swap $1 · flavor $1 · extra shot $1</span></p>
+          <div class="item">
+            <div class="item-top"><h4>Iced Americano</h4><span class="dots"></span><span class="price">$4</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Iced Latte</h4><span class="dots"></span><span class="price">$6.50</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Iced Matcha Latte</h4><span class="dots"></span><span class="price">$7</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Iced Chai Latte</h4><span class="dots"></span><span class="price">$7</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Iced Matcha Ceremonial</h4><span class="dots"></span><span class="price">$10</span></div>
+          </div>
+          <h3><span class="es">Té y más</span><span class="en">Tea &amp; more</span></h3>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Té caliente</span><span class="en">Hot tea</span></h4><span class="dots"></span><span class="price">$4</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Chocolate caliente</span><span class="en">Hot chocolate</span></h4><span class="dots"></span><span class="price">$5</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Matcha ceremonial</span><span class="en">Ceremonial matcha</span></h4><span class="dots"></span><span class="price">$6</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Chai Latte</h4><span class="dots"></span><span class="price">$4</span></div>
+          </div>
+          <h3><span class="es">Postres</span><span class="en">Desserts</span></h3>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Bizcocho</span><span class="en">Cake</span></h4><span class="dots"></span><span class="price">$5</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4><span class="es">Croissants rellenos</span><span class="en">Filled croissants</span></h4><span class="dots"></span><span class="price">$7</span></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><h4>Crolatos</h4><span class="dots"></span><span class="price">$10</span></div>
           </div>
         </div>
         <p class="menu-tagline">Donde cada taza cuenta una historia</p>
@@ -705,6 +799,28 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && header.classList.contains('open')) setOpen(false, true); });
     if (mq.addEventListener) mq.addEventListener('change', sync); else mq.addListener(sync);
     sync();
+  })();
+  // Menu tabs
+  (function () {
+    var tabs = [].slice.call(document.querySelectorAll('.menu-tab'));
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(t); });
+      t.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          select(tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length], true);
+        }
+      });
+    });
   })();
 </script>
 </body>
